@@ -15,7 +15,7 @@ app.post('/zero/auth', async (req: Request, res: Response) => {
     if (metadata.isWebhookRequest) return res.sendStatus(200);
     return res.status(200).json({data})
   } catch (err) {
-    return res.status(401).json({ error: 'unauthenticated' })
+    return res.status(401).json({ error: 'unauthorized' })
   }
 });
 
