@@ -7,7 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-const zero = new ZeroAccount()
+const zero = new ZeroAccount('')
 
 app.post('/zero/auth', async (req: Request, res: Response) => {
   try {
